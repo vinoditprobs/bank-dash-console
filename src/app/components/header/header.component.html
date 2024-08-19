@@ -42,15 +42,22 @@
                             <span class="p_icon rounded lg" ><img src="images/profile-pic.png" alt="" ></span>
                             </button>
                             <p-overlayPanel #profile>
-                                <div class="flex flex-column gap-3 w-25rem">
-                                test
+                                <div class="p-4" >
+                                     <figure class="d-flex m-0" >
+                                        <span class="p_icon" >
+                                            tes
+                                        </span>
+                                        <figcaption>
+                                            Test
+                                        </figcaption>
+                                     </figure>
                                 </div>
                             </p-overlayPanel>
                     </div>
-                    <div class="d-inline-flex" >
-                        <button class="clear" >
+                    <div class="d-inline-flex d-block d-md-none" >
+                        <button class="clear" (click)="toggleMenu()" >
                             <span class="p_icon lg rounded bg-primary text-white " >
-                                <i class="pi pi-bars" ></i>
+                                <i class="pi " [ngClass]="isMenuVisible ? 'pi-times' : 'pi-bars' " ></i>
                             </span>
                         </button>
                     </div>
@@ -61,7 +68,7 @@
         </div>
     </div>
 </div>
-<aside class="aside_nav" >
+<aside class="aside_nav" [ngClass]="isMenuVisible ? 'active' : ''" >
     <div class="main_logo_wrapp" >
         <div class="main_logo full" >
             <img class="" src="images/bank-dash.svg" alt="Bank Dash" >

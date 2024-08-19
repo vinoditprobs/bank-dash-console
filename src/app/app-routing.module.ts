@@ -5,7 +5,7 @@ import { LoansComponent } from './pages/loans/loans.component';
 import { TransactionsComponent } from './pages/transactions/transactions.component';
 
 const routes: Routes = [
-  {path:'dashboard', component:DashboardComponent},
+  {path:'', component:DashboardComponent},
   {path:'transactions', component:TransactionsComponent},
   {path:'loans', component: LoansComponent}
 ];

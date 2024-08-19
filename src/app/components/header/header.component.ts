@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  
+
   items: any;
 
   ngOnInit() {
@@ -71,4 +73,10 @@ export class HeaderComponent {
        }*/
     ]
   }
+
+  isMenuVisible: boolean = false
+  toggleMenu():void{
+    this.isMenuVisible = !this.isMenuVisible
+  }
+
 }

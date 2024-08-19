@@ -185,6 +185,8 @@ button{
     height: 100vh;
     width: 100%;
     max-width: 240px;
+    transition: transform cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+    transform: translateX(-100%);
     .main_logo_wrapp{
         height: 70px;
         width: 100%;
@@ -263,12 +265,22 @@ button{
         }
     }
 
-    
+    &.active{
+        transform: translateX(0);
+    }
+}
+
+
+.wrapper{
+    padding-top: 70px;
+    padding-left: 250px;
 }
 
 
 
 
 @media (min-width: 992px) {
-    
+    .aside_nav{
+        transform: translateX(0);
+    }
 }
