@@ -1,1 +1,82 @@
-<p>header works!</p>
+<div class="navigation_bar" >
+    <div class="container-fluid h-100" >
+        <div class="row gx-lg-5 h-100 align-items-center " >
+            <div class="col aside_col h-100" >
+                <div class="h-100 d-flex align-items-center " >
+                    <div class="main_logo full" >
+                        <img class="" src="images/bank-dash.svg" alt="Bank Dash" >
+                    </div>
+                </div>
+            </div>
+            <div class="col" >
+               <div class="row gx-lg-5 align-items-center" >
+                <div class="col-sm-12 col-md-4 d-none d-md-block" >
+                    <h4 class="mb-0" >Loans</h4>
+                </div>
+                <div class="col-sm-12 col-md-8 text-end " >
+                   <div class="d-inline-flex align-items-center gap-2" >
+                    <div class="d-inline-block d-none d-md-inline-block"  >
+                        <p-iconField iconPosition="left">
+                            <p-inputIcon styleClass="pi pi-search text-blue-light" />
+                            <input type="text" pInputText placeholder="Search for something" />
+                        </p-iconField>
+                    </div>
+                    <button class="clear" >
+                        <span class="p_icon rounded bg-primary-light" ><i class="pi pi-search" ></i></span>
+                    </button>
+                    <button class="clear" >
+                        <span class="p_icon rounded bg-primary-light" ><i class="pi pi-cog" ></i></span>
+                        </button>
+                    <div class="d-inline-block" >
+                        <button (click)="notification.toggle($event)" class="clear" >
+                            <span class="p_icon rounded bg-primary-light text-danger" ><i class="pi pi-bell" ></i></span>
+                            </button>
+                            <p-overlayPanel #notification>
+                                <div class="flex flex-column gap-3 w-25rem">
+                                test
+                                </div>
+                            </p-overlayPanel>
+                    </div>
+                    <div class="d-inline-block" >
+                        <button (click)="profile.toggle($event)" class="clear" >
+                            <span class="p_icon rounded lg" ><img src="images/profile-pic.png" alt="" ></span>
+                            </button>
+                            <p-overlayPanel #profile>
+                                <div class="flex flex-column gap-3 w-25rem">
+                                test
+                                </div>
+                            </p-overlayPanel>
+                    </div>
+                    <div class="d-inline-flex" >
+                        <button class="clear" >
+                            <span class="p_icon lg rounded bg-primary text-white " >
+                                <i class="pi pi-bars" ></i>
+                            </span>
+                        </button>
+                    </div>
+                   </div>
+                </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+<aside class="aside_nav" >
+    <div class="main_logo_wrapp" >
+        <div class="main_logo full" >
+            <img class="" src="images/bank-dash.svg" alt="Bank Dash" >
+        </div>
+    </div>
+    <nav class="main_menu" >
+        <p-panelMenu [model]="items"  />
+    </nav>
+</aside>
+<div class="page_title d-block d-md-none" >
+<div class="container-fluid py-3" >
+    <div class="row" >
+        <div class="col-sm-12" >
+            <h4 class="mb-0" >Loans</h4>
+        </div>
+    </div>
+</div>
+</div>
