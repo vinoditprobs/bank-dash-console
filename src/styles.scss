@@ -6,6 +6,15 @@ $lightGray: #F1F3F6;
 $headerFont: "Roboto", sans-serif !important;
 $textColor: #343C6A !important;
 $textBlueLight: #8BA3CB;
+$blueLight:#E7EDFF;
+$yellowLight:#FFF5D9;
+$magentaLight:#FFE0EB;
+$cyanLight:#DCFAF8;
+$blue:#396AFF;
+$yellow:#FFBB38;
+$magenta:#FF82AC;
+$cyan:#16DBCC;
+
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import "../node_modules/bootstrap/scss/bootstrap";
@@ -21,26 +30,71 @@ body {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
-    background-color: var(--bs-white);
+    background-color: $primaryLight;
     color: $textColor;
-
+    padding-top: 70px;
+    font-size: 14px;
     ::selection {
         background-color: rgba($color: $primary, $alpha: 0.5);
         color: white;
+    }
+    .wrapper{
+        main{
+          padding: 1rem;  
+          min-height: calc(100vh - 128px);
+        }
     }
 }
 
 .bg-primary-light{
     background-color: $primaryLight !important;
 }
+.bg-blue-light{
+    background-color: $blueLight !important;
+}
+.bg-yellow-light{
+    background-color: $yellowLight !important;
+}
+.bg-magenta-light{
+    background-color: $magentaLight !important;
+}
+.bg-cyan-light{
+    background-color: $cyanLight !important;
+}
+
+
 .text-blue-light{
     color: $textBlueLight !important;
 }
 
+.text-yellow-light{
+    color: $yellowLight !important;
+}
+.text-magenta-light{
+    color: $magentaLight !important;
+}
+.text-cyan-light{
+   color: $cyanLight !important;
+}
+
+.text-blue{
+    color: $blue !important;
+}
+.text-yellow{
+    color: $yellow !important;
+}
+.text-magenta{
+    color: $magenta !important;
+}
+.text-cyan{
+    color: $cyan !important;
+}
+
+
 p {
     margin-bottom: 0.75rem;
     line-height: 1.6;
-
+    margin-bottom: 0.5rem;
     &:last-child {
         margin-bottom: 0;
     }
@@ -271,9 +325,12 @@ button{
 }
 
 
-.wrapper{
-    padding-top: 70px;
-    padding-left: 250px;
+.card{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1.25em;
+    border: none;
+    overflow: hidden;
 }
 
 
@@ -282,5 +339,22 @@ button{
 @media (min-width: 992px) {
     .aside_nav{
         transform: translateX(0);
+    }
+    body{
+        padding-top: 70px;
+        .wrapper{
+            padding-left: 240px;
+            main{
+                padding: 2rem;
+                min-height: calc(100vh - 70px);
+            }
+        }
+    }
+    .card{
+        width: 100%;
+        padding: 1.25rem;
+        border-radius: 1.5em;
+        border: none;
+        overflow: hidden;
     }
 }
