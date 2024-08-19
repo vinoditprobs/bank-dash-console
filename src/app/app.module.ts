@@ -14,6 +14,7 @@ import { InputIconModule } from 'primeng/inputicon';
 import { InputTextModule } from 'primeng/inputtext';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { TransactionsComponent } from './pages/transactions/transactions.component';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { TransactionsComponent } from './pages/transactions/transactions.compone
     IconFieldModule,
     InputIconModule,
     InputTextModule,
-    PanelMenuModule
+    PanelMenuModule,
+    TableModule
   ],
   providers: [
     provideClientHydration()
