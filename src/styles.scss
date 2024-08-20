@@ -249,6 +249,10 @@ button{
         padding: 0 1.5rem;
     }
     .main_menu{
+
+        overflow-y: auto;
+        max-height: calc(100vh - 70px );
+
         .p-panelmenu{
                 .p-panelmenu-header{
                     .p-panelmenu-header-content{
