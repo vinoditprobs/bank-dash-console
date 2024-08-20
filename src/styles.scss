@@ -331,6 +331,9 @@ button{
     border-radius: 1.25em;
     border: none;
     overflow: hidden;
+    &.bordered{
+        border:1px solid #DDDDDD
+    }
 }
 
 
@@ -372,6 +375,47 @@ button{
     
 }
 
+
+.fs-7{
+    font-size: 0.9rem;
+}
+
+.list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li{
+    
+        a{
+            width: 100%;
+        }
+    }
+    &.bordered{
+        li{
+            border-top: 1px solid #DDDDDD;
+        }
+    }
+}
+
+.link{
+    display: inline-block;
+    padding: 0.75rem 0;
+    text-decoration: none;
+    color: #3A3839;
+    &:hover{
+        color: #000000 ;
+    }
+}
+
+
+.p-overlaypanel {
+    .p-overlaypanel-close {
+        right: 12px;
+        top: 12px;
+        background: none;
+        color: #3A3839;
+    }
+}
 
 @media (min-width: 992px) {
     .aside_nav{
