@@ -1,4 +1,7 @@
+
 import { Component } from '@angular/core';
+import { PageNameService } from '../../services/page-name.service';
+
 
 @Component({
   selector: 'app-loans',
@@ -9,9 +12,13 @@ export class LoansComponent {
 
   products: any
 
-  constructor() {}
+  constructor(private pageService: PageNameService) {}
 
+ 
   ngOnInit(): void {
+    
+    this.pageService.changePageName('Loans');
+
     this.products = [
       { sN: '01.', loanMony: '$100,000', leftRepay: '$40,500', duration: 10, interestRate: '12%', installment: '$2,000 / month' },
       { sN: '02.', loanMony: '$75,000', leftRepay: '$20,000', duration: 8, interestRate: '10%', installment: '$1,500 / month' },

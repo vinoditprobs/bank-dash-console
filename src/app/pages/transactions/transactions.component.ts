@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PageNameService } from '../../services/page-name.service';
 
 @Component({
   selector: 'app-transactions',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './transactions.component.scss'
 })
 export class TransactionsComponent {
+
+
+  constructor(private pageService: PageNameService) {}
+
+ngOnInit(){
+  this.pageService.changePageName('Transactions');
+}
 
 }

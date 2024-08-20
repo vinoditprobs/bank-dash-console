@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { PageNameService } from '../../services/page-name.service';
 
 @Component({
   selector: 'app-header',
@@ -7,11 +8,17 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  
+  pageName: string | undefined;
+
+  constructor(private pageService: PageNameService) {}
 
   items: any;
 
   ngOnInit() {
+    this.pageService.currentPageName.subscribe(
+      pageName => this.pageName = pageName
+    );
+
     this.items = [
       {
         label: 'Dashboard',
