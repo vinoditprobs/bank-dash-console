@@ -1,7 +1,7 @@
 <main>
     <div class="section" >
         <div class="container g-0" >
-            <div  class="row g-3 mb-3">
+            <div  class="row g-3 mb-4">
                 <div  class="col-6 col-md-6 col-lg-3 mb-2">
                     <div class="card h-100" >
                        <figure class="d-flex align-items-center m-0" >
@@ -58,10 +58,10 @@
         </div>
     </div>
     <div class="section" >
-        <div class="container" >
-            <div class="row mb-4" >
+        <div class="container gx-0" >
+            <div class="row mb-1" >
                 <div class="col-sm-12 " >
-                    <h6 class="text-blue" >Active Loans Overview</h6>
+                    <h6>Active Loans Overview</h6>
                 </div>
             </div>
             <div class="row" >
@@ -86,7 +86,18 @@
                                 <td>{{ product.duration }}</td>
                                 <td>{{ product.interestRate }}</td>
                                 <td>{{ product.installment }}</td>
-                                <td>{{ product.repay }}</td>
+                                <td><button class="btn btn-outline-dark btn-md rounded-5 w-100" >Repay</button></td>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="footer">
+                            <tr>
+                                <th>Total</th>
+                                <th>$125,0000</th>
+                                <th>$750,000</th>
+                                <th></th>
+                                <th></th>
+                                <th>$50,000 / month</th>
+                                <th></th>
                             </tr>
                         </ng-template>
                     </p-table>

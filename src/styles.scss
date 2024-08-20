@@ -334,6 +334,43 @@ button{
 }
 
 
+.p-datatable{
+    font-size: 14px;
+    .p-datatable-wrapper{
+        border-radius: 1.25em;
+        padding: 0.5rem;
+        background-color: #ffffff;
+        .p-datatable-tbody{
+            > tr{
+                border-bottom: 1px solid #E6EFF5;
+                > td{
+
+                }
+            }
+        }
+        .p-datatable-thead{
+            > tr {
+                border-bottom: 1px solid #E6EFF5;
+                > th{
+                    background-color: #ffffff;
+                    font-weight: 500;
+                    color: $textBlueLight;
+                }
+            }
+        }
+        .p-datatable-tfoot{
+            background-color: #fff;
+            tr{
+                th{
+                    padding: 1rem 1rem;
+                    color: $secondary;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    
+}
 
 
 @media (min-width: 992px) {
